@@ -1,0 +1,63 @@
+.categories {
+    display: flex;
+    height: 80vh;
+    gap: 10px;
+    margin: 10px;
+}
+.categories .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.categories .col-1 {
+    flex: 2;
+}
+.categories .row {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.categories .row button {
+    position: absolute;
+    min-width: 100px;
+    width: fit-content;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-size: 200%;
+    transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+    transition-delay: 0s, 0.15s;
+}
+.categories .row button:hover {
+    color: var(--slideTextColor);
+    cursor: pointer;
+    background-position: -100% 100%;
+}
+.categories .row img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+    .categories {
+        flex-direction: column;
+        height: unset;
+    }
+    .categories .col:nth-child(3) {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,112 @@
+.navbar {
+    height: 80px;
+}
+.navbar .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .wrapper .item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.navbar .wrapper .left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.navbar .wrapper .center,
+.mobileWrapper .link {
+   font-size: 30px;
+   letter-spacing: 2px;
+}
+.navbar .wrapper .right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.navbar .wrapper .right .icons {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    cursor: pointer;
+}
+.navbar .wrapper .right .icons .cartIcon,
+.mobileWrapper .cartIcon {
+    position: relative;
+    cursor: pointer;
+}
+.navbar .wrapper .right .icons .cartIcon span,
+.mobileWrapper .cartIcon span {
+   font-size: 12px;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color: #2f3a34df;
+   color: white;
+   position: absolute;
+   right: -10px;
+   top: -10px;
+   display: flex;
+   align-items: center;
+   justify-content: cente
+}
+.menuIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.mobileWrapper {
+    display: none;
+}
+
+@media  screen and (max-width: 900px) {
+    .mobileWrapper {
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobileRight {
+        display: flex;
+        gap: 10px;
+    }
+    .mobileWrapper .cartIcon {
+        position: absolute;
+        right: 60px;
+        top: 25px;
+        padding: 3px;
+    }
+    .mobileWrapper .cartIcon:hover {
+        background: lightgray;
+        border-radius: 50%;
+    }
+    .mobileItem {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 10;
+    }
+    .mobileItem a {
+        padding: 15px 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        cursor: pointer;
+    }
+    .mobileItem a:hover {
+       background-color: #2f3a34df;
+       color: white;
+    }
+}
+    
+
+
